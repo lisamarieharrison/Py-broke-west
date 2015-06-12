@@ -22,7 +22,7 @@ n_runs = 200
 krill_biomass = np.zeros(n_runs)
 calculated_biomass = np.zeros(n_runs)
 
-example_p = np.genfromtxt('C:/Users/Lisa/Documents/phd/southern ocean/BROKE-West/bw_example_p.csv', delimiter=',')
+example_p = np.genfromtxt('C:/Users/Lisa/Documents/phd/southern ocean/BROKE-West/bw_example_p_3.csv', delimiter=',')
 
 for i in range(0, n_runs):
     run_function = calc_krill_biomass(survey_area_width=565e3, survey_area_length=210e3, detected_width=50, edsu_width=2000)
