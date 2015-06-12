@@ -32,6 +32,6 @@ for i in range(0, n_runs):
 plt.hist(krill_biomass - calculated_biomass)
 plt.show()
 
-print np.mean(krill_biomass)
+print np.mean(krill_biomass) # mean true biomass in Mt
 
 print np.std(krill_biomass - calculated_biomass)/np.mean(krill_biomass) * 100
