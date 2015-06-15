@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def calc_krill_biomass(survey_area_width, survey_area_length, edsu_width, detected_width):
 
     n_cells = (survey_area_length/detected_width) * (survey_area_width/edsu_width)
