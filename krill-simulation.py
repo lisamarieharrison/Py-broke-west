@@ -23,7 +23,7 @@ n_runs = 200
 krill_biomass = np.zeros(n_runs)
 calculated_biomass = np.zeros(n_runs)
 
-example_p = np.genfromtxt('C:/Users/Lisa/Documents/phd/southern ocean/BROKE-West/bw_example_p_3.csv', delimiter=',')
+example_p = np.genfromtxt('C:/Users/43439535/Documents/Lisa/phd/Mixed models/Data/bw_example_p_3.csv', delimiter=',')
 
 for i in range(0, n_runs):
     run_function = calc_krill_biomass(survey_area_width=565e3, survey_area_length=210e3, detected_width=50, edsu_width=2000)
@@ -33,6 +33,6 @@ for i in range(0, n_runs):
 plt.hist(krill_biomass - calculated_biomass)
 plt.show()
 
-print np.mean(krill_biomass) # mean true biomass in Mt
+print("Mean true biomass (Mt) = " + str(round(np.mean(krill_biomass), 2)))  # mean true biomass in Mt
 
-print np.std(krill_biomass - calculated_biomass)/np.mean(krill_biomass) * 100
+print("Mean standard deviation of predictions (Mt) = " + str(round(np.std(krill_biomass - calculated_biomass)/np.mean(krill_biomass) * 100, 2)))
